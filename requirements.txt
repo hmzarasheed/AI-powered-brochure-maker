@@ -1,0 +1,6 @@
+requests
+json
+python-dotenv
+beautifulsoup4
+streamlit
+openai
