@@ -27,7 +27,70 @@ A Streamlit application that intelligently scrapes a company's website, analyzes
 
 ## 📦 Installation
 
+### 1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Set up your OpenAI API key:
+Create a `.env` file in the root directory with the following content:
+```env
+OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up your OpenAI API key**:
+   Create a `.env` file in the root directory:
+   ```env
+   OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx
+   ```
+
+---
+
+## 💻 Usage
+
+Run the Streamlit app:
+```bash
+streamlit run app.py
+```
+
+Then open [http://localhost:8501](http://localhost:8501) in your browser.
+
+---
+
+## 📋 Example
+
+Input:
+- Company Name: `Edward Donner`
+- Company URL: `https://edwarddonner.com`
+
+Output:
+- A markdown brochure covering the company’s mission, services, culture, and opportunities — written in a unique, captivating style.
+
+---
+
+## 🧠 How It Works
+
+1. **Scraping**: Grabs the homepage and internal links.
+2. **LLM Link Selection**: GPT-4o-mini selects relevant brochure-worthy pages.
+3. **Content Collection**: Extracts text from those pages.
+4. **Brochure Generation**: GPT composes a concise, markdown-based brochure.
+
+---
+
+## ⚠️ Notes
+
+- Only works with publicly accessible websites.
+- Social, email, and legal links are ignored.
+- Content is truncated if too long (limited to 10,000 tokens).
