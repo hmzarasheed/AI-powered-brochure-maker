@@ -72,8 +72,8 @@ Then open [http://localhost:8501](http://localhost:8501) in your browser.
 ## 📋 Example
 
 Input:
-- Company Name: `Edward Donner`
-- Company URL: `https://edwarddonner.com`
+- Company Name: `alkhidmat`
+- Company URL: `(https://alkhidmat.org/)`
 
 Output:
 - A markdown brochure covering the company’s mission, services, culture, and opportunities — written in a unique, captivating style.
